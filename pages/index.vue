@@ -1,1 +1,1 @@
-<template>Nuxt-shop</template>
+<template><AsideMenu /></template>
