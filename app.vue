@@ -1,1 +1,5 @@
-<template>Nuxt-shop</template>
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>

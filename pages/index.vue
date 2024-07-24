@@ -1,0 +1,1 @@
+<template>Nuxt-shop</template>
