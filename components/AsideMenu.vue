@@ -1,5 +1,9 @@
 <template>
-  <ul className="menu bg-base-200 rounded-box w-56">
+  <span
+    v-if="status === 'pending'"
+    class="loading loading-spinner loading-xs"
+  ></span>
+  <ul v-else class="menu bg-base-200 rounded-box w-56">
     <li v-for="categorie in categories">
       <p>{{ categorie.name }}</p>
     </li>
@@ -7,8 +11,7 @@
 </template>
 
 <script setup lang="ts">
-const { data: categories, error } = useFetch<Categorie[]>(
+const { data: categories, status } = useLazyFetch<Categorie[]>(
   "/api/categories/all"
 );
-const isLoading = ref<boolean>(false);
 </script>
